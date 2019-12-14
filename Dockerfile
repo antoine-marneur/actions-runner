@@ -2,7 +2,8 @@ FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y \
 	curl \
-	docker
+	docker \
+	docker-compose
 
 RUN mkdir actions-runner
 
