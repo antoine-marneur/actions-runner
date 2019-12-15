@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   actions-runner:
-    image: antoinemarneur/django-webapp
+    image: antoinemarneur/actions-runner
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
