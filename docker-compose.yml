@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  actions-runner:
+    image: antoinemarneur/django-webapp
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - traefik-net
+    environment:
+      - GITHUB_ACTIONS_URL=
+      - GITHUB_ACTIONS_TOKEN=
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+      restart_policy:
+        condition: on-failure
+
+networks:
+  traefik-net:
+    driver: overlay
+    external: true
