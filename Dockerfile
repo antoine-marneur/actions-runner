@@ -9,7 +9,7 @@ RUN mkdir actions-runner
 
 WORKDIR /actions-runner
 
-RUN curl -O https://github.com/actions/runner/releases/download/v2.263.0/actions-runner-linux-x64-2.263.0.tar.gz
+RUN curl -O -L https://github.com/actions/runner/releases/download/v2.263.0/actions-runner-linux-x64-2.263.0.tar.gz
 
 RUN tar xzf ./actions-runner-linux-x64-2.263.0.tar.gz
 
