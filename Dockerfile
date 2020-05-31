@@ -9,9 +9,9 @@ RUN mkdir actions-runner
 
 WORKDIR /actions-runner
 
-RUN curl -O https://githubassets.azureedge.net/runners/2.162.0/actions-runner-linux-x64-2.162.0.tar.gz
+RUN curl -O https://github.com/actions/runner/releases/download/v2.263.0/actions-runner-linux-x64-2.263.0.tar.gz
 
-RUN tar xzf ./actions-runner-linux-x64-2.162.0.tar.gz
+RUN tar xzf ./actions-runner-linux-x64-2.263.0.tar.gz
 
 CMD ./config.sh \
 	--url ${GITHUB_ACTIONS_URL} \
