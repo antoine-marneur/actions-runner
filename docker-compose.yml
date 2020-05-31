@@ -8,8 +8,8 @@ services:
       - traefik-net
     environment:
       - AGENT_ALLOW_RUNASROOT="1"
-      - GITHUB_ACTIONS_URL=
-      - GITHUB_ACTIONS_TOKEN=
+      - GITHUB_REPO=
+      - GITHUB_TOKEN=
     deploy:
       placement:
         constraints: [node.role == manager]
