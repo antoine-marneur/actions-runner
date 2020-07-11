@@ -4,7 +4,8 @@ RUN apt-get update && apt-get install -y \
 	jq \
 	curl \
 	docker \
-	docker-compose
+	docker-compose \
+	ansible
 
 RUN mkdir actions-runner
 
